@@ -11,13 +11,13 @@ version = "1.0"
 tasks.register<Jar>("sourcesJar") {
 
     from(sourceSets.main.get().allJava)
-    classifier = "sources"
+    archiveClassifier.set("sources")
 }
 
 tasks.register<Jar>("javadocJar") {
 
     from(tasks.javadoc)
-    classifier = "javadoc"
+    archiveClassifier.set("javadoc")
 }
 
 publishing {
@@ -109,7 +109,7 @@ dependencies {
     testImplementation("junit", "junit", "4.13.2")
 }
 
-configure<JavaPluginConvention> {
+configure<JavaPluginExtension> {
 
     sourceCompatibility = JavaVersion.VERSION_1_8
 }
