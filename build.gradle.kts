@@ -111,5 +111,5 @@ dependencies {
 
 configure<JavaPluginExtension> {
 
-    sourceCompatibility = JavaVersion.VERSION_20
+    sourceCompatibility = JavaVersion.VERSION_17
 }
